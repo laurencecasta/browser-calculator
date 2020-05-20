@@ -1,0 +1,92 @@
+html {  
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.chassis {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 33vw;
+  height: 75vh;
+  border-radius: 20px;
+}
+
+.display-container {
+  display: flex;
+  justify-content: center;
+  background: black;
+  border-radius: 15px 15px 0 0;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+. {
+  grid-area: numa;
+}
+
+.multiply {
+  grid-area: mult;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+
+.subtract {
+  grid-area: subtr;
+}
+
+.rowc {
+  grid-area: numc;
+}
+
+.zero {
+  grid-area: zer;
+}
+
+.decimal {
+  grid-area: dec;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.buttons-grid {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(5 1fr);
+  grid-template-columns: auto;
+  grid-template-areas: 
+    'clear clear clear divide'
+    'seven eight nine mult'
+    'four five six subtr'
+    'one two three add'
+    'zer zer dec equals';
+}
+button {
+  width: auto;
+  height: auto;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+.operator {
+  width: 40px;
+  height: 40px;
+  margin: none;
+}
