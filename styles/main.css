@@ -6,17 +6,25 @@ html {
 body {
   display: flex;
   justify-content: center;
+  background-image: url(../images/blackboard.jpg);
+  background-size: 100% 100%;
 }
 
 .chassis {
   display: flex;
   flex-direction: column;
-  border: 3px solid black;
+  border: 3px solid white;
   width: 33vw;
   height: 75vh;
   border-radius: 20px;
+  margin-top: 5%;
 }
 
+.chassis:hover {
+  box-shadow: 0px 0px 27px -1px rgba(0,0,0,0.75);
+  transform: scale(1.1);
+  transition-duration: 0.1s;
+}
 .display-container {
   display: flex;
   justify-content: center;
@@ -26,18 +34,29 @@ body {
 
 .clear {
   grid-area: clear;
+  background: rgb(206, 144, 124);
+}
+
+.clear:hover {
+  background: rgba(206, 145, 124, 0.295);
 }
 
 .divide {
   grid-area: divide;
+  background: rgb(124, 185, 206);
 }
 
-. {
-  grid-area: numa;
+.divide:hover {
+  background: rgba(124, 186, 206, 0.295);
 }
 
 .multiply {
   grid-area: mult;
+  background: rgb(124, 185, 206);
+}
+
+.multiply:hover {
+  background: rgba(124, 186, 206, 0.295);
 }
 
 .seven {
@@ -47,6 +66,11 @@ body {
 
 .subtract {
   grid-area: subtr;
+  background: rgb(124, 185, 206);
+}
+
+.subtract:hover {
+  background: rgba(124, 186, 206, 0.295);
 }
 
 .rowc {
@@ -55,6 +79,7 @@ body {
 
 .zero {
   grid-area: zer;
+  border-bottom-left-radius: 15px;
 }
 
 .decimal {
@@ -63,6 +88,20 @@ body {
 
 .equals {
   grid-area: equals;
+  border-bottom-right-radius: 15px;
+  background: rgb(124, 185, 206);
+}
+
+.equals:hover {
+  background: rgba(124, 186, 206, 0.295);
+}
+
+.add {
+  background: rgb(124, 185, 206);
+}
+
+.add:hover {
+  background: rgba(124, 186, 206, 0.295);
 }
 
 .buttons-grid {
@@ -78,13 +117,26 @@ body {
     'zer zer dec equals';
 }
 button {
+  font-family: inherit;
+  font-size: 25px;
   width: auto;
   height: auto;
-  border-radius: 30%;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
 }
+button:hover {
+  filter: invert(1)
+}
 
+button:focus {
+  outline: none;
+}
+
+button:active{
+  border: none;
+  border: 1px solid black;
+}
 .operator {
   width: 40px;
   height: 40px;
