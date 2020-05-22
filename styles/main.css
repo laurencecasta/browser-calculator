@@ -178,7 +178,7 @@ button:active{
   height: 23px;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
   #display {
     transform: scale(0.7);
   }
