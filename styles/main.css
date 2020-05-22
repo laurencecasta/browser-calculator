@@ -23,15 +23,22 @@ body {
 .chassis:hover {
   box-shadow: 0px 0px 27px -1px rgba(0,0,0,0.75);
   transform: scale(1.1);
-  transition-duration: 0.1s;
+  transition-duration: 0.5s;
 }
 .display-container {
   display: flex;
-  justify-content: center;
+  height: 150px;
+  justify-content: flex-end;
   background: black;
   border-radius: 15px 15px 0 0;
+  font-size: 25px;
 }
 
+#display {
+  margin-right: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
 .clear {
   grid-area: clear;
   background: rgb(206, 144, 124);
@@ -39,8 +46,12 @@ body {
 
 .clear:hover {
   background: rgba(206, 145, 124, 0.295);
+  transition-duration: 0.5s;
 }
 
+.back {
+  grid-area: back;
+}
 .divide {
   grid-area: divide;
   background: rgb(124, 185, 206);
@@ -48,6 +59,7 @@ body {
 
 .divide:hover {
   background: rgba(124, 186, 206, 0.295);
+  transition-duration: 0.5s;
 }
 
 .multiply {
@@ -57,6 +69,7 @@ body {
 
 .multiply:hover {
   background: rgba(124, 186, 206, 0.295);
+  transition-duration: 0.5s;
 }
 
 .seven {
@@ -71,6 +84,7 @@ body {
 
 .subtract:hover {
   background: rgba(124, 186, 206, 0.295);
+  transition-duration: 0.5s;
 }
 
 .rowc {
@@ -79,7 +93,7 @@ body {
 
 .zero {
   grid-area: zer;
-  border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 17px;
 }
 
 .decimal {
@@ -88,12 +102,21 @@ body {
 
 .equals {
   grid-area: equals;
-  border-bottom-right-radius: 15px;
+  border-bottom-right-radius: 17px;
   background: rgb(124, 185, 206);
 }
 
+.opPressed {
+  filter: invert(1) !important;
+  transition-duration: 0.2s !important;
+  background: rgba(124, 186, 206, 0.295) !important;
+  transition-duration: 0.2s !important;
+}
+
+
 .equals:hover {
   background: rgba(124, 186, 206, 0.295);
+  transition-duration: 0.5s;
 }
 
 .add {
@@ -102,6 +125,7 @@ body {
 
 .add:hover {
   background: rgba(124, 186, 206, 0.295);
+  transition-duration: 0.5s;
 }
 
 .buttons-grid {
@@ -110,7 +134,7 @@ body {
   grid-template-rows: repeat(5 1fr);
   grid-template-columns: auto;
   grid-template-areas: 
-    'clear clear clear divide'
+    'clear clear back divide'
     'seven eight nine mult'
     'four five six subtr'
     'one two three add'
@@ -118,15 +142,21 @@ body {
 }
 button {
   font-family: inherit;
-  font-size: 25px;
+  font-size: 32px;
   width: auto;
   height: auto;
   border: 1px solid black;
   display: flex;
   justify-content: center;
 }
-button:hover {
-  filter: invert(1)
+button:hover{
+  filter: invert(1);
+  transition-duration: 0.2s;
+}
+
+.pressed {
+  filter: invert(1);
+  transition-duration: 0.2s;
 }
 
 button:focus {
@@ -141,4 +171,19 @@ button:active{
   width: 40px;
   height: 40px;
   margin: none;
+}
+
+#backspace {
+  width: 23px;
+  height: 23px;
+}
+
+@media screen and (max-width: 750px) {
+  #display {
+    transform: scale(0.7);
+  }
+
+  .chassis {
+    width: 75vw
+  }
 }
