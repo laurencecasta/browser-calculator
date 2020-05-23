@@ -165,7 +165,7 @@ function matchNumToButton (button, key) {
     button.classList.add('opPressed');
   } else if (button.classList == 'subtract' && key == '-') {
     button.classList.add('opPressed');
-  } else if (button.classList == 'multiply' && key == ('*' || 'x')) {
+  } else if (button.classList == 'multiply' && key == ('*')) {
     button.classList.add('opPressed');
   } else if (button.classList == 'divide' && key == '/') {
     button.classList.add('opPressed');
@@ -198,7 +198,7 @@ window.addEventListener('keydown', (e) => {
       handleOperator(subtract);
       updateDisplay();
       break;
-    case '*' || 'x':
+    case '*':
       handleOperator(multiply);
       updateDisplay();
       break;
